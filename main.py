@@ -28,7 +28,7 @@ os.makedirs(os.path.join(UPLOAD_FOLDER, 'books'), exist_ok=True)
 os.makedirs(os.path.join(UPLOAD_FOLDER, 'images'), exist_ok=True)
 
 # Initialize Telegram bot
-BOT_TOKEN = "bot_token"  # Replace with your actual token
+BOT_TOKEN = "Bot_token"  # Replace with your actual token
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # Database initialization
@@ -94,7 +94,7 @@ def init_db():
     cursor.execute("SELECT * FROM users WHERE role = 'superadmin'")
     if not cursor.fetchone():
         # Set your superadmin chat ID here
-        superadmin_id = 70703567  # Replace with your actual Telegram ID
+        superadmin_id =  123456 #super admin uchun chat ID
         cursor.execute('''
         INSERT INTO users (user_id, username, first_name, last_name, role) 
         VALUES (?, ?, ?, ?, ?)
